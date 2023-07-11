@@ -1,0 +1,15 @@
+.container{
+    margin: 5px 5px;
+    padding: 10px 20px;
+
+}
+mat-grid-list{
+    margin-top: 20px;
+    padding: 20px;
+}
+mat-form-field{
+    width: 50%;
+}
+mat-grid-tile {
+    background: lightblue;
+  }

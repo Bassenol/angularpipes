@@ -1,0 +1,33 @@
+<div class="container">
+<mat-grid-list cols="2" rowHeight="7:1">
+  <form [formGroup]="pipeForm">
+    <mat-grid-tile
+      >Name:
+      <mat-form-field appearance="outline">
+        <input matInput formControlName="title" (input)="getName()" />
+      </mat-form-field>
+    </mat-grid-tile>
+    <mat-grid-tile
+      >Name:
+      {{ name | titlecase }}
+    </mat-grid-tile>
+
+    <mat-grid-tile
+      >Birthday:
+      <mat-form-field  appearance="outline">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="birthday"  (click)="getDate()"/>
+        <mat-hint>DD/MM/YYYY</mat-hint>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+      <button mat-raised-button (click)="picker.open()">Open</button>
+    </mat-grid-tile>
+    <mat-grid-tile 
+      >Birthday:
+      {{day|date:'YYYY MM,d'}}
+    </mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile>4</mat-grid-tile>
+  </form>
+</mat-grid-list>
+</div>
