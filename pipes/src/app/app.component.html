@@ -46,8 +46,22 @@
   >Height:
   {{ height | number:'1.0-4'}}
 </mat-grid-tile>
-    <mat-grid-tile>3</mat-grid-tile>
-    <mat-grid-tile>4</mat-grid-tile>
+<mat-grid-tile
+>Miles:
+<mat-form-field appearance="outline">
+  <input matInput formControlName="miles" (input)="getMiles()" />
+</mat-form-field>
+</mat-grid-tile>
+<mat-grid-tile
+>Kilometer:
+{{miles|custom:'km'}}
+</mat-grid-tile>
+    <mat-grid-tile></mat-grid-tile>
+    <mat-grid-tile>Meter:
+      {{miles|custom:'m'}}</mat-grid-tile>
+      <mat-grid-tile></mat-grid-tile>
+      <mat-grid-tile>Centimeter:
+        {{miles|custom:'cm'}}</mat-grid-tile>
   </form>
 </mat-grid-list>
 </div>

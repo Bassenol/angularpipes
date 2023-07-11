@@ -16,15 +16,16 @@ export class AppComponent {
    day:any;
    money:number=0;
    height:number=0;
+   miles:number=0;
 
  pipeForm= new FormGroup({
   title:new FormControl(),
   birthday:new FormControl(),
   money: new FormControl(),
-  height:new FormControl()
- })
+  height:new FormControl(),
+  miles: new FormControl()
   
-
+ })
 
 
 
@@ -42,6 +43,10 @@ export class AppComponent {
    }
    getHeight(){
     this.height= parseFloat(this.pipeForm.get('height')?.value);
+   }
+
+   getMiles(){
+    this.miles= parseFloat(this.pipeForm.get('miles')?.value);
    }
 
 }
