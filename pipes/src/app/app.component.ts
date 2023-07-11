@@ -14,10 +14,14 @@ export class AppComponent {
   title = 'pipes';
    name:string="";
    day:any;
+   money:number=0;
+   height:number=0;
 
  pipeForm= new FormGroup({
   title:new FormControl(),
-  birthday:new FormControl()
+  birthday:new FormControl(),
+  money: new FormControl(),
+  height:new FormControl()
  })
   
 
@@ -31,7 +35,13 @@ export class AppComponent {
    getDate(){
     this.day= this.pipeForm.get('birthday')?.value;
     //console.log(this.day)
+   }
 
+   getMoney(){
+    this.money= parseFloat(this.pipeForm.get('money')?.value);
+   }
+   getHeight(){
+    this.height= parseFloat(this.pipeForm.get('height')?.value);
    }
 
 }

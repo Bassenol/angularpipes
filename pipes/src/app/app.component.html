@@ -26,6 +26,26 @@
       >Birthday:
       {{day|date:'YYYY MM,d'}}
     </mat-grid-tile>
+    <mat-grid-tile
+    >Money:
+    <mat-form-field appearance="outline">
+      <input matInput formControlName="money" (input)="getMoney()" />
+    </mat-form-field>
+  </mat-grid-tile>
+  <mat-grid-tile
+    >Money:
+    {{ money |currency:'JPY'}}
+  </mat-grid-tile>
+  <mat-grid-tile
+  >Height:
+  <mat-form-field appearance="outline">
+    <input matInput formControlName="height" (input)="getHeight()" />
+  </mat-form-field>
+</mat-grid-tile>
+<mat-grid-tile
+  >Height:
+  {{ height | number:'1.0-4'}}
+</mat-grid-tile>
     <mat-grid-tile>3</mat-grid-tile>
     <mat-grid-tile>4</mat-grid-tile>
   </form>
